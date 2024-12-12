@@ -5,110 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Backend Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Sample JSON data for projects (You can replace this with an API call or dynamic data source)
-        const projects = [
-            {
-                title: "Project 1",
-                description: "A brief description of your project goes here. Mention the key technologies you used and any important outcomes or features.",
-                link: "https://github.com/your-profile/project1"
-            },
-            {
-                title: "Project 2",
-                description: "A brief description of your project goes here. Mention the key technologies you used and any important outcomes or features.",
-                link: "https://github.com/your-profile/project2"
-            },
-            {
-                title: "Project 3",
-                description: "A brief description of your project goes here. Mention the key technologies you used and any important outcomes or features.",
-                link: "https://github.com/your-profile/project3"
-            }
-        ];
-
-        // Function to render the projects dynamically
-        function loadProjects() {
-            const projectsContainer = document.getElementById("projects-container");
-            projects.forEach(project => {
-                const projectCard = document.createElement("div");
-                projectCard.classList.add("card", "bg-white", "p-6", "rounded-xl");
-
-                projectCard.innerHTML = `
-                    <h3 class="text-2xl font-semibold">${project.title}</h3>
-                    <p class="mt-4 text-gray-600">${project.description}</p>
-                    <a href="${project.link}" class="text-blue-600 mt-4 inline-block hover:underline">View Project</a>
-                `;
-                projectsContainer.appendChild(projectCard);
-            });
-        }
-
-        window.onload = loadProjects;  // Load projects when the page is loaded
-    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100">
 
     <!-- Navbar -->
     <nav class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
             <a href="#home" class="text-2xl font-bold">Nadimur Rahman Shawon</a>
             <div class="space-x-8 hidden md:flex">
-                <a href="#about" class="text-lg hover:text-gray-300 transition">About</a>
-                <a href="#projects" class="text-lg hover:text-gray-300 transition">Projects</a>
-                <a href="#contact" class="text-lg hover:text-gray-300 transition">Contact</a>
+                <a href="#about" class="text-lg hover:text-gray-300">About</a>
+                <a href="#skills" class="text-lg hover:text-gray-300">Skills</a>
+                <a href="#projects" class="text-lg hover:text-gray-300">Projects</a>
+                <a href="#contact" class="text-lg hover:text-gray-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-cover bg-center h-screen text-white relative flex items-center justify-center" style="background-image: url('your-background-image.jpg');">
+    <section id="home" class="bg-cover bg-center h-screen text-white relative flex items-center justify-center" style="background-image: url('background.jpg');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="z-10 text-center px-6">
             <h1 class="text-5xl font-extrabold leading-tight">Hello, I'm Nadimur Rahman Shawon</h1>
-            <p class="text-xl mt-4">A passionate Backend Engineer | Django | React | MongoDB | Python</p>
+            <p class="text-xl mt-4">A passionate Backend Engineer | Python | Django | MongoDB</p>
             <a href="#contact" class="mt-8 inline-block bg-blue-600 text-white py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition">Get in Touch</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100">
+    <section id="about" class="py-20 bg-gray-200">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-3xl font-semibold">About Me</h2>
             <p class="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
-                I am a backend engineer with over X years of experience in building high-performing, scalable web applications. My expertise includes backend technologies such as Node.js, Python, and databases like MongoDB, MySQL. I thrive on solving complex problems and building efficient server-side systems that power modern web apps.
+                I am a backend engineer with over 5 years of experience, building scalable and performant applications. I specialize in Python, Django, and MongoDB.
             </p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="py-20">
+    <section id="skills" class="py-20">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold">Skills & Technologies</h2>
+            <h2 class="text-3xl font-semibold">Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mt-6">
-                <div class="skill-card text-center">
-                    <img src="nodejs-logo.png" alt="Node.js" class="mx-auto h-16 w-16 mb-4">
-                    <p class="font-medium">Node.js</p>
-                </div>
-                <div class="skill-card text-center">
-                    <img src="express-logo.png" alt="Express" class="mx-auto h-16 w-16 mb-4">
-                    <p class="font-medium">Express</p>
-                </div>
-                <div class="skill-card text-center">
-                    <img src="mongodb-logo.png" alt="MongoDB" class="mx-auto h-16 w-16 mb-4">
-                    <p class="font-medium">MongoDB</p>
-                </div>
-                <div class="skill-card text-center">
-                    <img src="python-logo.png" alt="Python" class="mx-auto h-16 w-16 mb-4">
-                    <p class="font-medium">Python</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold">My Projects</h2>
-            <div id="projects-container" class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Projects will be dynamically inserted here -->
+                <div><img src="nodejs-logo.png" alt="Node.js" class="mx-auto h-16 w-16 mb-4"><p>React</p></div>
+                <div><img src="python-logo.png" alt="Python" class="mx-auto h-16 w-16 mb-4"><p>Python</p></div>
+                <div><img src="mongodb-logo.png" alt="MongoDB" class="mx-auto h-16 w-16 mb-4"><p>Flask</p></div>
             </div>
         </div>
     </section>
@@ -118,16 +58,9 @@
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-3xl font-semibold">Contact Me</h2>
             <p class="mt-6 text-lg">Feel free to reach out for collaboration, freelance work, or just a chat about tech!</p>
-            <a href="mailto:your-email@example.com" class="mt-8 inline-block bg-white text-blue-600 py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition">Email Me</a>
+            <a href="mailto:your-email@example.com" class="mt-8 inline-block bg-white text-blue-600 py-3 px-8 rounded-full text-lg hover:bg-gray-200">Email Me</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <p>&copy; 2024 Nadimur Rahman Shawon. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+    <footer class="bg
